@@ -39,6 +39,7 @@ These choices tighten Iteration 0 (fixtures on real hardware), relax Iteration 8
 |------|---------|
 | [`spec.md`](spec.md) | **Single source of requirements** — changes here drive spec deltas and tests. |
 | [`plan.md`](plan.md) | **This file** — iterations, acceptance criteria, process. |
+| [`CMakeLists.txt`](CMakeLists.txt) | Root CMake project — filter binary, CTest, install rules. |
 | `docs/` | Architecture notes, protocol findings, iteration retrospectives, visual sign-off checklists. |
 | `src/` | CUPS filters, protocol encoder, networking, color pipeline — **production code only**. |
 | `tests/` | Unit tests, golden files, mocks — **no production code**. |
@@ -263,3 +264,4 @@ This driver is for **personal use on your own hardware** only. Reverse engineeri
 |---------|------|--------|
 | 1.0 | 2026-04-06 | Initial plan from spec + stakeholder answers |
 | 1.1 | 2026-04-06 | Git workflow, Code Review Agent, repo paths |
+| 1.2 | 2026-04-06 | Iteration 1: CMake stub filter, PPD, CI, developer install doc |

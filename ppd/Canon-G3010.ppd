@@ -1,0 +1,22 @@
+*PPD-Adobe: "4.3"
+*FormatVersion: "4.3"
+*FileVersion: "1.0"
+*LanguageVersion: English
+*LanguageEncoding: ISOLatin1
+*PCFileName: "CANONG3010.PPD"
+*Manufacturer: "Canon"
+*Product: "(PIXMA G3010)"
+*ModelName: "PIXMA G3010"
+*ShortNickName: "Canon G3010"
+*NickName: "Canon PIXMA G3010 (development stub)"
+*1284DeviceID: "MFG:Canon;MDL:PIXMA G3010;"
+*ColorDevice: True
+*cupsVersion: "2.2"
+*cupsFilter: "application/pdf 0 /usr/local/libexec/cups/filter/g3010_filter"
+*OpenUI *PageSize/Page Size: PickOne
+*OrderDependency: 10 AnySetup *PageSize
+*DefaultPageSize: A4
+*PageSize Letter/Letter 8.5x11in: "<</PageSize[612 792]/ImagingBBox null/MirrorImage false>>setpagedevice"
+*PageSize A4/A4: "<</PageSize[595 842]/ImagingBBox null/MirrorImage false>>setpagedevice"
+*CloseUI: *PageSize
+*cupsLanguages: "en"
