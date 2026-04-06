@@ -46,9 +46,22 @@ These choices tighten Iteration 0 (fixtures on real hardware), relax Iteration 8
 | `filters/` | Optional: filter entrypoints if not colocated under `src/` (or merge into `src/` — keep one clear convention). |
 | `packaging/` | Scripts and resources for `.pkg` or local install (personal use). |
 | `fixtures/` | Captured hex/pcap-derived test vectors (no copyrighted blobs if avoidable; prefer synthetic or minimal captures). |
+| [`AGENTS.md`](AGENTS.md) | Registered Cursor agents (e.g. Code Review Agent). |
+| [`docs/code-review-agent.md`](docs/code-review-agent.md) | Full review output format and checklist. |
+| [`docs/git-workflow.md`](docs/git-workflow.md) | Branch naming and merge policy. |
+| [`scripts/`](scripts/) | Helper scripts (e.g. `review-context.sh` for pre-merge review). |
+| [`.cursor/rules/`](.cursor/rules/) | Cursor rules; `code-review-agent.mdc` triggers review behavior. |
 
 **SDD workflow:** Change `spec.md` → update acceptance tests / plan slice if needed → implement.  
 **TDD workflow:** Red → green → refactor within each iteration’s scope; no feature “done” without tests for that scope.
+
+---
+
+## Git workflow & code review
+
+- **Feature branches:** Any change to **code**, **`spec.md`**, or **`plan.md`** (and related tests/docs) is done on a **feature branch** branched from `main`, not directly on `main`.
+- **Before merge:** Changes are **code reviewed** using the **Code Review Agent** (Cursor AI) per [`docs/code-review-agent.md`](docs/code-review-agent.md). The agent compares **`main...HEAD`** (three-dot diff), checks SDD/TDD alignment, security, and merge readiness, and returns **Approve** | **Request changes** | **Comment**.
+- **How-to:** [`docs/git-workflow.md`](docs/git-workflow.md), [`AGENTS.md`](AGENTS.md), and `./scripts/review-context.sh` for diff context. GitHub PRs use [`.github/pull_request_template.md`](.github/pull_request_template.md) as a reminder.
 
 ---
 
@@ -249,3 +262,4 @@ This driver is for **personal use on your own hardware** only. Reverse engineeri
 | Version | Date | Notes |
 |---------|------|--------|
 | 1.0 | 2026-04-06 | Initial plan from spec + stakeholder answers |
+| 1.1 | 2026-04-06 | Git workflow, Code Review Agent, repo paths |
