@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Build (CMake / Xcode)
+build/
+cmake-build-*/
+DerivedData/
+*.o
+*.a
+*.dylib
+
+# Editor
+.idea/
+.vscode/
+*.swp
